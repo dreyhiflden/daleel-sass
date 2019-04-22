@@ -1,14 +1,14 @@
 .add-icon::before {
   content: '';
   display: block;
-  background: url("../../img/add-icon.svg") no-repeat -4px -4px;
+  background: url("../img/add-icon.svg") no-repeat -4px -4px;
   width: 16px;
   height: 16px;
   position: absolute;
 }
 
 .header {
-  background: no-repeat center url("../../img/header-bg.png") #1F2569;
+  background: no-repeat center url("../img/header-bg.png") #1F2569;
   padding: 0 0 88px 0;
 
   &__top-container {
