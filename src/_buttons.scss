@@ -1,0 +1,51 @@
+.button {
+  text-decoration: none;
+  padding: 14px 35px;
+  font-size: 14px;
+  line-height: 1.33;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid transparent;
+
+    &--default {
+    background: #2E368F;
+  }
+
+    &--default:hover {
+    background: #4F58B8;
+  }
+
+    &--yellow {
+    background: #FFC519;
+    position: relative;
+    color: #1F2569;
+  }
+
+    &__text-width-icon {
+    padding: 0 0 0 22px;
+  }
+
+    &--yellow:hover {
+    background: #FFD559;
+  }
+
+    &--goto {
+
+      background: #F5F6F7;
+      text-align: left;
+      color: #1F2569;
+      border: 1px solid #4F58B8;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        height: 10px;
+        width: 11px;
+        background: url("../img/arrow-icon.svg");
+        content: '';
+      }
+    }
+}

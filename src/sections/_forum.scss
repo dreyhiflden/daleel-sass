@@ -1,0 +1,138 @@
+.forum {
+  background: #F5F6F7;
+  padding: 50px 0;
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card {
+  max-width: 538px;
+  border-radius: 5px;
+  border: 1px solid #EEB201;
+  background: #fff;
+  padding: 20px;
+
+  &__container {
+    padding: 0 20px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: minmax(180px, auto);
+    justify-content: center;
+    grid-template-rows: repeat(4, minmax(236px, auto));
+    margin: 0 0 20px 0;
+  }
+
+  %card-headline {
+    color: #EEB201;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__category {
+    @extend %card-headline;
+  }
+
+  &__category-description {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__question {
+    @extend %card-headline;
+  }
+
+  &__question-content {
+    font-weight: bold;
+  }
+
+  &__infopanel {
+    border-top: 1px solid #ECEEEE;
+    padding: 20px 0;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "answers date"
+      "goto-button goto-button";
+  }
+
+  &__count_of_answers {
+    position: relative;
+    padding-left: 25px;
+    grid-area: answers;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: url("../../img/answers-icon.svg");
+      content: '';
+    }
+  }
+
+  &__date {
+    position: relative;
+    padding-left: 25px;
+    justify-self: end;
+    grid-area: date;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: url("../../img/date-icon.svg");
+      content: '';
+    }
+  }
+
+  &__goto-btn {
+    grid-area: goto-button;
+  }
+}
+
+@media all and (min-width: $mobile) {
+  .card {
+    min-width: 100%;
+
+    &__container {
+      grid-template-columns: minmax(180px, 90%);
+      grid-template-rows: repeat(4, minmax(236px, auto));
+    }
+  }
+}
+
+@media all and (min-width: 1130px) {
+  .forum {
+    padding: 50px 0;
+  }
+
+  .card {
+    width: 538px;
+
+    &__container {
+      grid-template-columns: repeat(2, 538px);
+      grid-template-rows: auto auto;
+    }
+
+    &__infopanel {
+      justify-content: space-between;
+      align-items: center;
+      grid-template-columns: auto auto 203px;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "answers date goto-button";
+    }
+  }
+
+}
+

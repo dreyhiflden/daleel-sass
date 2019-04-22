@@ -1,0 +1,128 @@
+.suppliers {
+  padding: 50px 0;
+
+  &__list {
+    margin: 65px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    min-width: 100%;
+
+    &-item {
+      list-style: none;
+      margin: 0 20px;
+    }
+  }
+}
+
+.quote {
+  padding: 0 10px;
+  max-width: 985px;
+  display: flex;
+  flex-direction: column;
+
+  &__headline {
+    width: 210px;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 50px 0;
+    position: relative;
+    padding-left: 44px;
+    align-self: center;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -30px;
+      height: 44px;
+      width: 64px;
+      background: url("../../img/quites-icon.png");
+      content: '';
+    }
+  }
+
+  &__content {
+    padding: 0 10px;
+    margin: 0 0 50px 0;
+  }
+
+  &__author {
+    padding: 0 10px;
+    margin: 0 0 50px 0;
+
+    &-name {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 0;
+      margin: 0 0 10px 0;
+    }
+
+    &-position {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media all and (min-width: $mobile) {
+  .suppliers {
+    padding: 50px 0;
+  }
+
+  .quote {
+    &__headline {
+      padding-left: 94px;
+      align-self: flex-start;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        height: 44px;
+        width: 64px;
+        background: url("../../img/quites-icon.png");
+        content: '';
+      }
+    }
+  }
+
+}
+
+@media all and (min-width: 1060px){
+  .quote {
+    max-width: 985px;
+    margin: 0 auto;
+
+    &__headline {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0 0 50px 0;
+      position: relative;
+      padding-left: 84px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 44px;
+        width: 64px;
+        background: url("../../img/quites-icon.png");
+        content: '';
+      }
+    }
+
+    &__content {
+      padding: 0 0 0 84px;
+      margin: 0 0 50px 0;
+    }
+
+    &__author {
+      padding: 0 0 0 84px;
+      margin: 0 0 50px 0;
+    }
+  }
+}

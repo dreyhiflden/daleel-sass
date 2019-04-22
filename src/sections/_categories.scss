@@ -1,0 +1,124 @@
+.categories {
+  &__container {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+    grid-template-columns: minmax(340px, auto);
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+    grid-template-rows: repeat(6, 235px);
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+  }
+
+  &__item {
+    display: grid;
+    padding: 30px 30px;
+    align-content: space-between;
+    border-radius: 10px;
+
+    &--one {
+      grid-area: one;
+      background: url("../../img/category-bg.png") center center / cover no-repeat;
+    }
+
+    &--two {
+      grid-area: two;
+      background: url("../../img/category-bg.png") center center / cover no-repeat;
+    }
+
+    &--three {
+      grid-area: three;
+      background: url("../../img/category-bg.png") center center / cover no-repeat;
+    }
+
+    &--four {
+      grid-area: four;
+      background: url("../../img/category2-bg.png") center center / cover no-repeat;
+    }
+
+    &--five {
+      grid-area: five;
+      background: url("../../img/category2-bg.png") center center / cover no-repeat;
+    }
+
+    &--six {
+      grid-area: six;
+      background: url("../../img/category-bg.png") center center / cover no-repeat;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+  }
+}
+
+.category__headline {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.category__tag {
+  padding: 10px 15px;
+  background: #E8E8E8;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4B4C55;
+  margin: 0 15px 0 0;
+}
+
+@media only screen and (min-width: $mobile) {
+  .categories {
+    &__container {
+      grid-column-gap: 20px;
+      grid-template-rows: repeat(6, 200px);
+      padding: 0;
+      margin: 0 0 35px 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .categories {
+    &__container {
+      grid-template-columns: repeat(auto-fit, minmax(200px ,315px));
+      grid-template-areas:
+        "one one four four"
+        "two two five five"
+        "three three six six";
+      grid-template-rows: 235px 235px 235px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .categories {
+    &__container {
+      grid-template-columns: minmax(200px ,315px) minmax(200px ,315px) minmax(225px ,315px) minmax(315px ,315px);
+      grid-template-areas:
+        "one one two two"
+        "one one four five"
+        "three three four six";
+      grid-template-rows: 235px 235px 235px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1390px) {
+  .categories {
+    &__container {
+      grid-template-columns: 315px 315px 315px 315px;
+      padding: 0;
+      margin: 0 0 35px 0;
+    }
+  }
+}
