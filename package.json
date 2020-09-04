@@ -13,6 +13,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-server-livereload": "^1.9.2",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   }
 }
